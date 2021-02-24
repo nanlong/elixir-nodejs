@@ -115,6 +115,11 @@ defmodule NodeJS.Worker do
     end
   end
 
+  @doc false
+  def handle_info(_, state) do
+    {:noreply, state}
+  end
+
   defp decode(data) do
     data
     |> to_string()
